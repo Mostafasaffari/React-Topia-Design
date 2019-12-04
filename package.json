@@ -1,0 +1,75 @@
+{
+  "name": "react-topia-design",
+  "version": "0.1.0",
+  "description": "This is a very simple project developed by Topia design component",
+  "main": "index.tsx",
+  "keywords": [
+    "React",
+    "Redux",
+    "Hook",
+    "CRA",
+    "StyledComponent",
+    "TypeScript",
+    "Jest",
+    "Enzyme",
+    "Topia.design"
+  ],
+  "author": "Mostafa Saffari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mostafasaffari/React-Topia-Design/issues"
+  },
+  "homepage": "https://github.com/Mostafasaffari/React-Topia-Design#readme",
+  "dependencies": {
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "24.0.18",
+    "@types/node": "12.7.9",
+    "@types/react": "16.9.3",
+    "@types/react-dom": "16.9.1",
+    "@types/react-router-dom": "^5.1.0",
+    "i18next": "^17.2.0",
+    "i18next-chained-backend": "^2.0.0",
+    "i18next-localstorage-backend": "^3.0.0",
+    "i18next-xhr-backend": "^3.2.0",
+    "jss": "^10.0.0",
+    "jss-rtl": "^0.3.0",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-i18next": "^10.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.1.2",
+    "typescript": "3.6.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "release": "standard-version"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mostafasaffari/React-Topia-Design.git"
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "standard-version": "^7.0.0"
+  }
+}
