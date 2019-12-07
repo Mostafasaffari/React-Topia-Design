@@ -1,2 +1,2 @@
-# React-Topia-Design
-This is a very simple project developed by Topia design component
+# Simple-React-Dashboard-AntDesign
+This is a very simple Dashboard developed by Antd and Styled-component
