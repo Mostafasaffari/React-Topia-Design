@@ -42,6 +42,8 @@
     "react-i18next": "^10.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
+    "styled-components": "^4.4.1",
+    "styled-theme": "^0.3.3",
     "typescript": "3.6.3"
   },
   "scripts": {
