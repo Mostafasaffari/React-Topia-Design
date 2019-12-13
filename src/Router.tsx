@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Provider } from "react-redux";
-import { store, history } from "./pages/redux/store";
+import { store, history } from "./redux/store";
 import { ConnectedRouter } from "connected-react-router";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
