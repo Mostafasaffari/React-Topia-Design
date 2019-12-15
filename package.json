@@ -1,6 +1,6 @@
 {
   "name": "simple-react-dashboard-antdesign",
-  "version": "0.1.3",
+  "version": "0.1.2",
   "description": "This is a very simple Dashboard developed by Antd and Styled-component",
   "main": "index.tsx",
   "keywords": [
