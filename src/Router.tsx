@@ -13,12 +13,12 @@ const Router: React.FC = () => {
       <ThemeProvider theme={store.getState().AppSetting.theme}>
         <BrowserRouter>
           <Suspense fallback={<div />}>
-            <Switch>
-              <ConnectedRouter history={history}>
+            <ConnectedRouter history={history}>
+              <Switch>
                 <Route exact path="/" component={App} />
                 <Route component={() => <h1>404</h1>} />
-              </ConnectedRouter>
-            </Switch>
+              </Switch>
+            </ConnectedRouter>
           </Suspense>
         </BrowserRouter>
       </ThemeProvider>
