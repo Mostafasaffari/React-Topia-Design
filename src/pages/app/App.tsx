@@ -1,10 +1,11 @@
 import React from "react";
 
+import AppWrapper from "./app.style";
 const App: React.FC = () => {
   return (
-    <div data-test="wrapper">
+    <AppWrapper data-test="wrapper">
       <h1>Test app </h1>
-    </div>
+    </AppWrapper>
   );
 };
 
