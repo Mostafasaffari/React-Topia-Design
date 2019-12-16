@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/compare/v1.1.0...v1.2.0) (2019-12-16)
+
+
+### Features
+
+* change theme dynamicly complete ([98c45fe](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/commit/98c45fedc9b724df9610c3bac471eb35ba83a350))
+
 ## [1.1.0](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/compare/v0.1.1...v1.1.0) (2019-12-16)
 
 
