@@ -1,28 +1,18 @@
 import React, { Suspense, lazy } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { Provider } from "react-redux";
 import { ConnectedRouter } from "connected-react-router";
-import { ThemeProvider, DefaultTheme } from "styled-components";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import { cookieStore } from "./helpers/localStorage";
 
-import { history, AppState } from "./redux/store";
-import appSettingActions from "./redux/appSetting/actions";
-
-import ChangeTheme from "./components/changeTheme/ChangeTheme";
+import { history, store } from "./redux/store";
 
 const App = lazy(() => import("./pages/app"));
 const Login = lazy(() => import("./pages/login"));
 
 const Router: React.FC = () => {
-  const theme = useSelector((state: AppState) => state.AppSetting.theme);
-  const dispatch = useDispatch();
-  const handleChangeTheme = (theme: DefaultTheme) => {
-    dispatch(appSettingActions.changeTheme(theme)); // Although we do not need to store the theme in Redux, I store the theme in Redux for a sample and storing in the state can be enough
-  };
   return (
-    <ThemeProvider theme={theme}>
-      <ChangeTheme onChangeTheme={handleChangeTheme} />
+    <Provider store={store}>
       <BrowserRouter>
         <Suspense fallback={<div />}>
           <ConnectedRouter history={history}>
@@ -34,7 +24,7 @@ const Router: React.FC = () => {
           </ConnectedRouter>
         </Suspense>
       </BrowserRouter>
-    </ThemeProvider>
+    </Provider>
   );
 };
 
