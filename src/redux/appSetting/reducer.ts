@@ -1,4 +1,5 @@
 import { IAppSettingState, AppSettingActionTypes, CHANGE_THEME } from "./types";
+
 import { MainTheme } from "../../style/themes";
 
 const initState: IAppSettingState = {
