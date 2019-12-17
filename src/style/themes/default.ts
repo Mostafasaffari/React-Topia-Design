@@ -1,11 +1,14 @@
 import { DefaultTheme } from "styled-components";
 
 const theme: DefaultTheme = {
-  borderRadius: "3px",
-
+  mainBorderRadius: "3px",
+  mainBorderWidth: "1px",
   colors: {
-    blackToWhite: ["#000000", "#ffffff"],
-    main: ["#1890ff"]
+    black: "#000000",
+    white: "#ffffff",
+    mainBackground: "#1890ff",
+    mainBorder: "#1890ff",
+    mainFont: "#0a0a0a"
   }
 };
 

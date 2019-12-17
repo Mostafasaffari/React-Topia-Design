@@ -5,11 +5,14 @@ import "styled-components";
 declare module "styled-components" {
   export type ThemeName = "main" | "special";
   export interface DefaultTheme {
-    borderRadius: string;
-
+    mainBorderRadius: string;
+    mainBorderWidth: string;
     colors: {
-      blackToWhite: string[];
-      main: string[];
+      black: string;
+      white: string;
+      mainFont: string;
+      mainBackground: string;
+      mainBorder: string;
     };
   }
 }
