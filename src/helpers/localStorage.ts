@@ -39,7 +39,7 @@ const Storage = (type: LocalStorageType = "local"): IStorage => {
   };
 };
 
-export default Storage;
+//export default Storage;
 
 const setCookie = (cookieName: string, cookieValue: string, exdays = 10) => {
   var d = new Date();
@@ -67,4 +67,9 @@ const clearCookie = (cookieName: string) => {
   document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 };
 
-export { clearCookie };
+const cookieStore = Storage("cookie");
+const localStore = Storage("local");
+const sessionStore = Storage("session");
+const indexStore = Storage("index");
+
+export { clearCookie, cookieStore, sessionStore, indexStore, localStore };

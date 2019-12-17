@@ -6,10 +6,10 @@ const initState: IAppSettingState = {
   theme: MainTheme
 };
 
-export default function appSettingReducer(
+const appSettingReducer = (
   state = initState,
   action: AppSettingActionTypes
-) {
+) => {
   switch (action.type) {
     case CHANGE_THEME: {
       return {
@@ -20,4 +20,6 @@ export default function appSettingReducer(
     default:
       return state;
   }
-}
+};
+
+export default appSettingReducer;
