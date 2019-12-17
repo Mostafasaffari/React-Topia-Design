@@ -15,12 +15,14 @@ const composeEnhancers =
       })
     : compose;
 
+const rootReducers = combineReducers({
+  router: connectRouter(history),
+  ...reducers
+});
 const store = createStore(
-  combineReducers({
-    router: connectRouter(history),
-    ...reducers
-  }),
+  rootReducers,
   composeEnhancers(applyMiddleware(...middlewares))
 );
 
 export { store, history };
+export type AppState = ReturnType<typeof rootReducers>;
