@@ -1,18 +1,52 @@
-// import original module declarations
 import "styled-components";
 
-// and extend them!
+interface ISize {
+  s12: string;
+  s11: string;
+  s10: string;
+  s9: string;
+  s8: string;
+  s7: string;
+  s6: string;
+  s5: string;
+  s4: string;
+  s3: string;
+  s2: string;
+  s1: string;
+  main: string;
+  l1: string;
+  l2: string;
+  l3: string;
+  l4: string;
+  l5: string;
+  xl1: string;
+  xl2: string;
+  xl3: string;
+  xl4: string;
+  xl5: string;
+  xl6: string;
+}
+
 declare module "styled-components" {
   export type ThemeName = "main" | "special";
   export interface DefaultTheme {
-    mainBorderRadius: string;
+    borderRadius: {
+      main: string;
+      button: string;
+      box: string;
+    };
     mainBorderWidth: string;
+    sizes: {
+      font: ISize;
+      spacing: ISize;
+    };
     colors: {
       black: string;
       white: string;
       mainFont: string;
       mainBackground: string;
       mainBorder: string;
+      RedGradientBackgroud: string;
     };
   }
 }
