@@ -5,7 +5,7 @@ import { ThemeProvider, DefaultTheme } from "styled-components";
 import { AppState } from "../../redux/store";
 import appSettingActions from "../../redux/appSetting/actions";
 
-import ChangeTheme from "../../components/changeTheme/ChangeTheme";
+import ChangeTheme from "../../components/changeTheme";
 
 import AppWrapper from "./app.style";
 
