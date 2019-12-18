@@ -6,7 +6,6 @@ const theme: DefaultTheme = {
     box: "8px",
     button: "4px"
   },
-  mainBorderWidth: "1px",
   sizes: {
     font: {
       s12: "0.076923rem", //1px
@@ -65,9 +64,14 @@ const theme: DefaultTheme = {
     black: "#000000",
     white: "#ffffff",
     mainBackground: "#fafafa",
-    mainBorder: "#1890ff",
+    mainBorder: "#f77062",
+    secoundBorder: "#04f0c5",
     mainFont: "#0a0a0a",
-    RedGradientBackgroud: "linear-gradient(to right, #fe5193, #f77062)"
+    secoundFont: "#04f0c5",
+    redGradientBackgroud: "linear-gradient(to right, #fe5193, #f77062)",
+    buttonGradientBackgroud:
+      "linear-gradient(107.24deg, #04f0c5 0%, #00dda2 99.85%)",
+    buttonBackgroundHover: "#fefefe"
   }
 };
 

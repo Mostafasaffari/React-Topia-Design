@@ -35,7 +35,6 @@ declare module "styled-components" {
       button: string;
       box: string;
     };
-    mainBorderWidth: string;
     sizes: {
       font: ISize;
       spacing: ISize;
@@ -44,9 +43,13 @@ declare module "styled-components" {
       black: string;
       white: string;
       mainFont: string;
+      secoundFont: string;
       mainBackground: string;
       mainBorder: string;
-      RedGradientBackgroud: string;
+      secoundBorder: string;
+      redGradientBackgroud: string;
+      buttonGradientBackgroud: string;
+      buttonBackgroundHover: string;
     };
   }
 }
