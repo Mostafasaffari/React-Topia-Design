@@ -8,7 +8,8 @@ const ButtonStyle = (ComponentName: typeof Button) => styled(ComponentName)`
   font-weight: bold;
   min-width: 120px;
   min-height: 40px;
-  &:hover {
+  &:hover,
+  &:focus {
     color: ${props => props.theme.colors.secoundFont};
     background: ${props => props.theme.colors.buttonBackgroundHover};
     border: 1px solid ${props => props.theme.colors.secoundBorder};

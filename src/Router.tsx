@@ -8,7 +8,7 @@ import { cookieStore } from "./helpers/localStorage";
 import { history, store } from "./redux/store";
 
 const App = lazy(() => import("./pages/app"));
-const Login = lazy(() => import("./pages/login"));
+const Login = lazy(() => import("./pages/login/SignIn"));
 
 const Router: React.FC = () => {
   return (
