@@ -63,15 +63,23 @@ const theme: DefaultTheme = {
   colors: {
     black: "#000000",
     white: "#ffffff",
-    mainBackground: "#fafafa",
-    mainBorder: "#f77062",
-    secoundBorder: "#04f0c5",
-    mainFont: "#0a0a0a",
-    secoundFont: "#04f0c5",
-    redGradientBackgroud: "linear-gradient(to right, #fe5193, #f77062)",
-    buttonGradientBackgroud:
-      "linear-gradient(107.24deg, #04f0c5 0%, #00dda2 99.85%)",
-    buttonBackgroundHover: "#fefefe"
+    background: {
+      main: "#fafafa",
+      redGradient: "linear-gradient(to right, #fe5193, #f77062)"
+    },
+    border: {
+      main: "#f77062",
+      secound: "#04f0c5"
+    },
+    font: {
+      main: "#0a0a0a",
+      secound: "#04f0c5"
+    },
+    button: {
+      gradientBackgroud:
+        "linear-gradient(107.24deg, #04f0c5 0%, #00dda2 99.85%)",
+      hoverBackground: "#fefefe"
+    }
   }
 };
 

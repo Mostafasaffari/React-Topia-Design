@@ -42,14 +42,22 @@ declare module "styled-components" {
     colors: {
       black: string;
       white: string;
-      mainFont: string;
-      secoundFont: string;
-      mainBackground: string;
-      mainBorder: string;
-      secoundBorder: string;
-      redGradientBackgroud: string;
-      buttonGradientBackgroud: string;
-      buttonBackgroundHover: string;
+      font: {
+        main: string;
+        secound: string;
+      };
+      background: {
+        main: string;
+        redGradient: string;
+      };
+      border: {
+        main: string;
+        secound: string;
+      };
+      button: {
+        gradientBackgroud: string;
+        hoverBackground: string;
+      };
     };
   }
 }

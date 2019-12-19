@@ -13,7 +13,7 @@ const LoginWrapper = styled.div`
       justify-content: center;
       width: 100%;
       padding: ${props => props.theme.sizes.spacing.main};
-      background: ${props => props.theme.colors.redGradientBackgroud};
+      background: ${props => props.theme.colors.background.redGradient};
       border-radius: ${props => props.theme.borderRadius.main}
         ${props => props.theme.borderRadius.main} 0 0;
       & span {
@@ -29,7 +29,7 @@ const LoginWrapper = styled.div`
       align-items: center;
       width: 350px;
       padding: ${props => props.theme.sizes.spacing.main};
-      border: 1px solid ${props => props.theme.colors.mainBorder};
+      border: 1px solid ${props => props.theme.colors.border.main};
     }
   }
 `;
