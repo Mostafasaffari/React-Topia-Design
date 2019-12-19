@@ -18,7 +18,7 @@ const userReducer = (
       };
 
     case DELETE_TOKEN:
-      cookieStore.set("token", "");
+      cookieStore.clear("token");
       return {
         ...state,
         token: ""

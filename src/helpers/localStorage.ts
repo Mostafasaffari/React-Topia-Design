@@ -1,75 +1,58 @@
-type LocalStorageType = "local" | "session" | "index" | "cookie";
-
 interface IStorage {
   get: (name: string) => string | null;
   set: (name: string, value: string) => void;
+  clear: (name: string) => void;
 }
-const Storage = (type: LocalStorageType = "local"): IStorage => {
-  return {
-    get: (name: string) => {
-      switch (type) {
-        case "local":
-          return localStorage.getItem(name);
-        case "cookie":
-          return getCookie(name);
-        case "session":
-          return null; //TODO: implement later
-        case "index":
-          return null; //TODO: implement later
-        default:
-          throw Error("Storage type not found");
-      }
-    },
-    set: (name: string, value: string) => {
-      switch (type) {
-        case "local":
-          localStorage.setItem(name, value);
-          break;
-        case "cookie":
-          setCookie(name, value);
-          break;
-        case "session":
-          break; //TODO: implement later
-        case "index":
-          break; //TODO: implement later
-        default:
-          throw Error("Storage type not found");
-      }
-    }
+
+class MyLocalStorage implements IStorage {
+  get = (name: string) => {
+    return localStorage.getItem(name);
   };
-};
+  set = (name: string, value: string) => {
+    localStorage.setItem(name, value);
+  };
+  clear = (name: string) => {
+    localStorage.setItem(name, "");
+  };
+}
+class CookieStorage implements IStorage {
+  get = (name: string) => {
+    return this.getCookie(name);
+  };
+  set = (name: string, value: string) => {
+    this.setCookie(name, value);
+  };
+  clear = (name: string) => {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+  };
+  private setCookie = (
+    cookieName: string,
+    cookieValue: string,
+    exdays = 10
+  ) => {
+    var d = new Date();
+    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = `${cookieName}=${cookieValue};${expires};path=/;`;
+  };
 
-//export default Storage;
-
-const setCookie = (cookieName: string, cookieValue: string, exdays = 10) => {
-  var d = new Date();
-  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  var expires = "expires=" + d.toUTCString();
-  document.cookie = `${cookieName}=${cookieValue};${expires};path=/;`;
-};
-
-const getCookie = (cookieName: string) => {
-  var name = cookieName + "=";
-  var ca = document.cookie.split(";");
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) === " ") {
-      c = c.substring(1);
+  private getCookie = (cookieName: string) => {
+    var name = cookieName + "=";
+    var ca = document.cookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === " ") {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
     }
-    if (c.indexOf(name) === 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-};
+    return "";
+  };
+}
 
-const clearCookie = (cookieName: string) => {
-  document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-};
+const cookieStore: IStorage = new CookieStorage();
+const localStore: IStorage = new MyLocalStorage();
 
-const cookieStore = Storage("cookie");
-const localStore = Storage("local");
-const sessionStore = Storage("session");
-const indexStore = Storage("index");
-
-export { clearCookie, cookieStore, sessionStore, indexStore, localStore };
+export { cookieStore, localStore };
