@@ -1,2 +1,6 @@
 # Simple-React-Dashboard-AntDesign
-This is a very simple Dashboard developed by Antd and Styled-component
+This is a boilerplate Dashboard developed by Antd and Styled-component
+
+
+### npm install
+### npm start
