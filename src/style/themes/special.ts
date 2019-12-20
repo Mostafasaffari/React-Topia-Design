@@ -72,8 +72,8 @@ const theme: DefaultTheme = {
       secound: "#04f0c5"
     },
     font: {
-      main: "#0a0a0a",
-      secound: "#04f0c5"
+      main: "#ff0000",
+      secound: "#0000ff"
     },
     button: {
       gradientBackgroud:
