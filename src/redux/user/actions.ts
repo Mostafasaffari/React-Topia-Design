@@ -1,12 +1,13 @@
-import { IUserActions, SET_TOKEN, DELETE_TOKEN } from "./types";
+import { IUserActions, SIGNIN, SIGNOUT } from "./types";
 
 const actions: IUserActions = {
-  setToken: (token: string) => ({
-    type: SET_TOKEN,
-    token
+  signIn: (token, username) => ({
+    type: SIGNIN,
+    token,
+    username
   }),
-  deleteToken: () => ({
-    type: DELETE_TOKEN
+  signOut: () => ({
+    type: SIGNOUT
   })
 };
 

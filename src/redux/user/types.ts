@@ -1,22 +1,27 @@
-export const SET_TOKEN = "SET_TOKEN";
-export const DELETE_TOKEN = "DELETE_TOKEN";
+export const SIGNIN = "SIGNIN";
+export const SIGNOUT = "SIGNOUT";
 
 export interface IUserState {
   token: string;
+  username: string;
 }
 
-interface ISetTokenAction {
-  type: typeof SET_TOKEN;
+interface ISignInAction {
+  type: typeof SIGNIN;
   token: IUserState["token"];
+  username: IUserState["username"];
 }
 
-interface IDeleteTokenAction {
-  type: typeof DELETE_TOKEN;
+interface ISignOutAction {
+  type: typeof SIGNOUT;
 }
 
 export interface IUserActions {
-  setToken: (token: IUserState["token"]) => ISetTokenAction;
-  deleteToken: () => IDeleteTokenAction;
+  signIn: (
+    token: IUserState["token"],
+    username: IUserState["username"]
+  ) => ISignInAction;
+  signOut: () => ISignOutAction;
 }
 
-export type UserActionTypes = ISetTokenAction | IDeleteTokenAction;
+export type UserActionTypes = ISignInAction | ISignOutAction;
