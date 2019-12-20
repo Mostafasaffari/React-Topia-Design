@@ -13,7 +13,7 @@ const App: React.FC = () => {
   const theme = useSelector((state: AppState) => state.AppSetting.theme);
   const dispatch = useDispatch();
   const handleChangeTheme = (theme: DefaultTheme) => {
-    dispatch(appSettingActions.changeTheme(theme)); // Although we do not need to store the theme in Redux, I store the theme in Redux for a sample and storing in the state can be enough
+    dispatch(appSettingActions.changeTheme(theme));
   };
   return (
     <ThemeProvider theme={theme}>
