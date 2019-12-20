@@ -82,8 +82,7 @@
     "url": "git+https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign.git"
   },
   "devDependencies": {
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
+    "@testing-library/react": "^9.4.0",
     "standard-version": "^7.0.0"
   }
 }
