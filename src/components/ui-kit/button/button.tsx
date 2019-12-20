@@ -1,4 +1,4 @@
-import AntButton from "antd/es/button";
+import {Button as AntButton} from "antd";
 
 import ButtonStyle from "./button.style";
 

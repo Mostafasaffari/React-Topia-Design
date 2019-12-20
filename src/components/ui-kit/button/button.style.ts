@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "antd/es/button";
+import { Button } from "antd";
 
 const ButtonStyle = (ComponentName: typeof Button) => styled(ComponentName)`
   background: ${props => props.theme.colors.button.gradientBackgroud};

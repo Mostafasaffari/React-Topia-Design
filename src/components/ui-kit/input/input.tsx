@@ -1,4 +1,4 @@
-import AntInput from "antd/es/input";
+import { Input as AntInput } from "antd";
 import InputStyle from "./input.style";
 
 const Input = InputStyle(AntInput);
