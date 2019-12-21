@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/compare/v1.2.0...v1.3.0) (2019-12-21)
+
+
+### Features
+
+* complete login project ([79d5abb](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/commit/79d5abb0270addd8a4afacfdb556c04c69181298))
+
+
+### Bug Fixes
+
+* change someting points for compatible with jest ([74a3c55](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/commit/74a3c555ecfbd3a8795053e3c42844297f714257))
+
 ## [1.2.0](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/compare/v1.1.0...v1.2.0) (2019-12-16)
 
 
