@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
 
-import App from "./App";
+import Layout from "./Layout";
 
 describe("App Component", () => {
   it("Should render without crash", () => {

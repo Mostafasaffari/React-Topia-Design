@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const AppWrapper = styled.div`
+const LayoutWrapper = styled.div`
   h1 {
     color: ${props => props.theme.colors.font.main};
   }
 `;
 
-export default AppWrapper;
+export default LayoutWrapper;
