@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/compare/v1.3.0...v1.3.1) (2019-12-21)
+
+
+### Bug Fixes
+
+* change app to layout in router ([4da44cf](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/commit/4da44cf1ffd6154828761ed656e231494d1ecfaf))
+
 ## [1.3.0](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/compare/v1.2.0...v1.3.0) (2019-12-21)
 
 
