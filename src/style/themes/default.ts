@@ -63,8 +63,12 @@ const theme: DefaultTheme = {
   colors: {
     background: {
       main: "#fafafa",
-      redGradient: "linear-gradient(to right, #fe5193, #f77062)",
-      appBar: "#fefefe"
+      firstGradient: "linear-gradient(to right, #fe5193, #f77062)",
+      appBar: "#fefefe",
+      contentLayout: "#f0f2f5",
+      footer: "#fefefe",
+      sideBar: "#001529",
+      hoverLight: "rgba(255, 255, 255, 0.2)"
     },
     border: {
       main: "#f77062",

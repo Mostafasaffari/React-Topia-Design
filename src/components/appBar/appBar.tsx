@@ -12,9 +12,9 @@ interface IProps {
 const AppBar: React.FC<IProps> = ({ toggle, collapsed }) => {
   return (
     <AppBarWrapper>
-      <Header className="appbar__header">
+      <Header>
         <Icon
-          className="appbar__header--trigger"
+          className="trigger"
           type={collapsed ? "menu-unfold" : "menu-fold"}
           onClick={toggle}
         />

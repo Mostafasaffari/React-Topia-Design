@@ -13,7 +13,7 @@ const LoginWrapper = styled.div`
       justify-content: center;
       width: 100%;
       padding: ${props => props.theme.sizes.spacing.main};
-      background: ${props => props.theme.colors.background.redGradient};
+      background: ${props => props.theme.colors.background.firstGradient};
       border-radius: ${props => props.theme.borderRadius.main}
         ${props => props.theme.borderRadius.main} 0 0;
       & span {

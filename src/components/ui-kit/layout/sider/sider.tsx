@@ -1,4 +1,6 @@
 import Layout from "../";
+import SiderStyle from "./sider.style";
 
 const { Sider } = Layout;
-export default Sider;
+
+export default SiderStyle(Sider);

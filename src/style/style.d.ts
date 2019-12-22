@@ -47,8 +47,12 @@ declare module "styled-components" {
       };
       background: {
         main: string;
-        redGradient: string;
+        firstGradient: string;
         appBar: string;
+        contentLayout: string;
+        footer: string;
+        sideBar: string;
+        hoverLight: string;
       };
       border: {
         main: string;
