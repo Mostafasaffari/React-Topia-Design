@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
+import { INavigationSidebar } from "../../interfaces/dataListInterfaces";
 
 import Menu from "../ui-kit/menu";
 import Icon from "../ui-kit/icon";
@@ -11,23 +14,51 @@ interface IPorps {
   title: string;
   url: string;
   collapsed: boolean;
+  navData: INavigationSidebar[];
 }
-const SideBar: React.FC<IPorps> = ({ title, collapsed, url }) => {
+const SideBar: React.FC<IPorps> = ({ title, collapsed, url, navData }) => {
+  const [selectedMenuKeys, setSelectedMenuKeys] = useState<string[]>([]);
+
+  const handleClickLogo = () => {
+    setSelectedMenuKeys([]);
+  };
+  const handleClickMenu = ({ key }: { key: string }) =>
+    setSelectedMenuKeys([key]);
+
   return (
     <SideBarWrapper>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="sidebar--logo">
-          {!collapsed ? title : <Icon type="appstore" />}
-        </div>
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-          <MenuItem key="1">
-            <Icon type="user" />
-            <span>nav 1</span>
-          </MenuItem>
-          <MenuItem key="2">
-            <Icon type="video-camera" />
-            <span>nav 2</span>
-          </MenuItem>
+      <Sider
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        className="sidebar"
+      >
+        <Link to={`${url}`}>
+          <div className="sidebar__logo" onClick={handleClickLogo}>
+            {!collapsed ? title : <Icon type="appstore" />}
+          </div>
+        </Link>
+        <Menu
+          mode="inline"
+          className="sidebar__menu"
+          onSelect={handleClickMenu}
+          selectedKeys={selectedMenuKeys}
+        >
+          {navData &&
+            navData.length > 0 &&
+            navData.map(item => (
+              <MenuItem key={item.id} className="sidebar__menu-items">
+                <Link to={`${url}/${item.link}`}>
+                  <Icon
+                    type="ordered-list"
+                    className="sidebar__menu-items--i"
+                  />
+                  <span className="sidebar__menu-items--span">
+                    {item.title}
+                  </span>
+                </Link>
+              </MenuItem>
+            ))}
         </Menu>
       </Sider>
     </SideBarWrapper>
