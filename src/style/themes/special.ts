@@ -61,11 +61,10 @@ const theme: DefaultTheme = {
     }
   },
   colors: {
-    black: "#000000",
-    white: "#ffffff",
     background: {
       main: "#fafafa",
-      redGradient: "linear-gradient(to right, #fe5193, #f77062)"
+      redGradient: "linear-gradient(to right, #fe5193, #f77062)",
+      appBar: "#fafafa"
     },
     border: {
       main: "#f77062",
@@ -73,7 +72,8 @@ const theme: DefaultTheme = {
     },
     font: {
       main: "#ff0000",
-      secound: "#0000ff"
+      secound: "#0000ff",
+      light: "#ffffff"
     },
     button: {
       gradientBackgroud:

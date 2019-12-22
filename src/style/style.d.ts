@@ -40,15 +40,15 @@ declare module "styled-components" {
       spacing: ISize;
     };
     colors: {
-      black: string;
-      white: string;
       font: {
         main: string;
         secound: string;
+        light: string;
       };
       background: {
         main: string;
         redGradient: string;
+        appBar: string;
       };
       border: {
         main: string;

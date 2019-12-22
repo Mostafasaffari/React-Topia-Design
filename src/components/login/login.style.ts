@@ -17,7 +17,7 @@ const LoginWrapper = styled.div`
       border-radius: ${props => props.theme.borderRadius.main}
         ${props => props.theme.borderRadius.main} 0 0;
       & span {
-        color: ${props => props.theme.colors.white};
+        color: ${props => props.theme.colors.font.light};
         font-size: ${props => props.theme.sizes.font.xl4};
       }
     }

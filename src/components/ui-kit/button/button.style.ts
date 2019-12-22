@@ -3,7 +3,7 @@ import { Button } from "antd";
 
 const ButtonStyle = (ComponentName: typeof Button) => styled(ComponentName)`
   background: ${props => props.theme.colors.button.gradientBackgroud};
-  color: ${props => props.theme.colors.white};
+  color: ${props => props.theme.colors.font.light};
   font-size: ${props => props.theme.sizes.font.l3};
   font-weight: bold;
   min-width: 120px;
