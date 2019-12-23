@@ -7,6 +7,7 @@ import { ThemeProvider, DefaultTheme } from "styled-components";
 import { INavigationSidebar } from "../../../interfaces/dataListInterfaces";
 
 import { AppState } from "../../../redux/store";
+import userActions from "../../../redux/user/actions";
 import appSettingActions from "../../../redux/appSetting/actions";
 
 import AppBar from "../../../components/appBar";
@@ -20,7 +21,7 @@ import AppRouter from "../RestrictedRouter";
 import AppWrapper from "./layout.style";
 
 interface IProps extends RouteComponentProps {}
-const App: React.FC<IProps> = ({ match }) => {
+const App: React.FC<IProps> = ({ match, history }) => {
   const [collapseSideBar, setCollapseSideBar] = useState(false);
   const { t } = useTranslation();
   const theme = useSelector((state: AppState) => state.AppSetting.theme);
@@ -34,6 +35,10 @@ const App: React.FC<IProps> = ({ match }) => {
     event: React.MouseEvent<HTMLElement, MouseEvent>
   ) => {
     setCollapseSideBar(!collapseSideBar);
+  };
+  const handleSignOutUser = () => {
+    dispatch(userActions.signOut());
+    history.push("/");
   };
 
   const navigationSidebarData: INavigationSidebar[] = [
@@ -62,6 +67,7 @@ const App: React.FC<IProps> = ({ match }) => {
             collapsed={collapseSideBar}
             toggle={handleToggleSideBar}
             onChangeTheme={handleChangeTheme}
+            signOutUser={handleSignOutUser}
           />
           <Content>
             <AppWrapper data-test="wrapper">

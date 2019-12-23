@@ -15,7 +15,7 @@ const AppBarWrapper = styled.div`
     min-width: 200px;
     justify-content: space-between;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 50px;
   }
 `;
 

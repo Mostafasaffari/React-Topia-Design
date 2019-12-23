@@ -2,7 +2,7 @@ import React from "react";
 import { DefaultTheme } from "styled-components";
 
 import Icon from "../ui-kit/icon";
-import UserInfo from "../userInfo";
+import UserInfo from "./userInfo";
 import ChangeTheme from "../changeTheme";
 import Header from "../ui-kit/layout/header";
 
@@ -12,8 +12,14 @@ interface IProps {
   toggle: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
   collapsed: boolean;
   onChangeTheme: (theme: DefaultTheme) => void;
+  signOutUser: () => void;
 }
-const AppBar: React.FC<IProps> = ({ toggle, collapsed, onChangeTheme }) => {
+const AppBar: React.FC<IProps> = ({
+  toggle,
+  collapsed,
+  onChangeTheme,
+  signOutUser
+}) => {
   return (
     <AppBarWrapper>
       <Header className="appbar__header">
@@ -24,7 +30,7 @@ const AppBar: React.FC<IProps> = ({ toggle, collapsed, onChangeTheme }) => {
         />
         <div className="appbar__header-right">
           <ChangeTheme onChangeTheme={onChangeTheme} />
-          <UserInfo />
+          <UserInfo signOutUser={signOutUser} />
         </div>
       </Header>
     </AppBarWrapper>
