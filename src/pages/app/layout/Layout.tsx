@@ -45,12 +45,14 @@ const App: React.FC<IProps> = ({ match, history }) => {
     {
       id: 1,
       title: t("sidebarMenu.todoList"),
-      link: "todoList"
+      link: "todoList",
+      icon: "ordered-list"
     },
     {
       id: 2,
       title: t("sidebarMenu.setting"),
-      link: "setting"
+      link: "setting",
+      icon: "setting"
     }
   ];
   return (

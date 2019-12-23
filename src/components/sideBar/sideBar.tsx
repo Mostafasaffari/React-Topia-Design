@@ -49,10 +49,7 @@ const SideBar: React.FC<IPorps> = ({ title, collapsed, url, navData }) => {
             navData.map(item => (
               <MenuItem key={item.id} className="sidebar__menu-items">
                 <Link to={`${url}/${item.link}`}>
-                  <Icon
-                    type="ordered-list"
-                    className="sidebar__menu-items--i"
-                  />
+                  <Icon type={item.icon} className="sidebar__menu-items--i" />
                   <span className="sidebar__menu-items--span">
                     {item.title}
                   </span>

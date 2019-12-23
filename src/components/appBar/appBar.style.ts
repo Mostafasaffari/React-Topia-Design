@@ -7,7 +7,7 @@ const AppBarWrapper = styled.div`
     align-items: center;
   }
   .appbar__header--trigger {
-    margin-left: ${props => props.theme.sizes.spacing.s3};
+    margin: 0 ${props => props.theme.sizes.spacing.main};
     font-size: ${props => props.theme.sizes.font.l5};
   }
   .appbar__header-right {
