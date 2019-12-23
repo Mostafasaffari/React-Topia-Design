@@ -13,6 +13,9 @@ const UserInfoWrapper = styled.div`
 `;
 
 export const PopoverWrapper = styled.div`
+  display: flex;
+  cursor: pointer;
+
   i {
     font-size: ${props => props.theme.sizes.font.xl2};
   }
