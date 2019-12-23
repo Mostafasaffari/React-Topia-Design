@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/compare/v1.3.1...v1.4.0) (2019-12-23)
+
+
+### Features
+
+* add navigation menu and improve components work ([ab79781](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/commit/ab79781df408c80e6e485f30d78448c31c688dfd))
+* complete user info and dashboard simple ([0b1a614](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/commit/0b1a614e120b1c3a6959b82be1d490b4ee25c756))
+
+
+### Bug Fixes
+
+* mobile view side bar fix ([5c6df6e](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/commit/5c6df6e9b46a698595ee18693a94218b070eb9d0))
+
 ### [1.3.1](https://github.com/Mostafasaffari/Simple-React-Dashboard-AntDesign/compare/v1.3.0...v1.3.1) (2019-12-21)
 
 
