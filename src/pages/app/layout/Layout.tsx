@@ -9,16 +9,15 @@ import { INavigationSidebar } from "../../../interfaces/dataListInterfaces";
 import { AppState } from "../../../redux/store";
 import appSettingActions from "../../../redux/appSetting/actions";
 
+import AppBar from "../../../components/appBar";
 import SideBar from "../../../components/sideBar";
 import Layout from "../../../components/ui-kit/layout";
-import ChangeTheme from "../../../components/changeTheme";
+import Content from "../../../components/ui-kit/layout/content";
+import Footer from "../../../components/ui-kit/layout/footer";
 
 import AppRouter from "../RestrictedRouter";
 
 import AppWrapper from "./layout.style";
-import AppBar from "../../../components/appBar";
-import Content from "../../../components/ui-kit/layout/content";
-import Footer from "../../../components/ui-kit/layout/footer";
 
 interface IProps extends RouteComponentProps {}
 const App: React.FC<IProps> = ({ match }) => {
@@ -27,6 +26,7 @@ const App: React.FC<IProps> = ({ match }) => {
   const theme = useSelector((state: AppState) => state.AppSetting.theme);
   const dispatch = useDispatch();
   const { url } = match;
+
   const handleChangeTheme = (theme: DefaultTheme) => {
     dispatch(appSettingActions.changeTheme(theme));
   };
@@ -35,6 +35,7 @@ const App: React.FC<IProps> = ({ match }) => {
   ) => {
     setCollapseSideBar(!collapseSideBar);
   };
+
   const navigationSidebarData: INavigationSidebar[] = [
     {
       id: 1,
@@ -56,9 +57,12 @@ const App: React.FC<IProps> = ({ match }) => {
           collapsed={collapseSideBar}
           navData={navigationSidebarData}
         />
-        {/* <ChangeTheme onChangeTheme={handleChangeTheme} /> */}
         <Layout>
-          <AppBar collapsed={collapseSideBar} toggle={handleToggleSideBar} />
+          <AppBar
+            collapsed={collapseSideBar}
+            toggle={handleToggleSideBar}
+            onChangeTheme={handleChangeTheme}
+          />
           <Content>
             <AppWrapper data-test="wrapper">
               <AppRouter url={url} />
