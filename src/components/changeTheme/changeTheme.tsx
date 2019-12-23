@@ -28,8 +28,14 @@ const ChangeTheme: React.FC<IProps> = ({ onChangeTheme }) => {
   };
   return (
     <ChangeThemeWrapper>
-      <Button onClick={handleChangeTheme("main")}>Default Theme</Button>
-      <Button onClick={handleChangeTheme("special")}>Special Theme</Button>
+      <Button
+        onClick={handleChangeTheme("main")}
+        style={{ background: MainTheme.ownColorTheme }}
+      ></Button>
+      <Button
+        onClick={handleChangeTheme("special")}
+        style={{ background: SpecialTheme.ownColorTheme }}
+      ></Button>
     </ChangeThemeWrapper>
   );
 };

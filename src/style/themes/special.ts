@@ -1,6 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 const theme: DefaultTheme = {
+  ownColorTheme: "blue",
   borderRadius: {
     main: "5px",
     box: "8px",

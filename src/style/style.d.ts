@@ -30,6 +30,7 @@ interface ISize {
 declare module "styled-components" {
   export type ThemeName = "main" | "special";
   export interface DefaultTheme {
+    ownColorTheme: string;// use for choosing theme button
     borderRadius: {
       main: string;
       button: string;
