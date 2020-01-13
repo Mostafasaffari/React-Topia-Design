@@ -9,4 +9,11 @@ interface IApiConfig {
   };
 }
 
+interface IResponseData {
+  // it depends on your response api data
+  data: any;
+  error: any;
+  pagination: any;
+}
+
 export { axios };
