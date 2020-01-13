@@ -16,4 +16,11 @@ interface IResponseData {
   pagination: any;
 }
 
-export { axios };
+class MyAPI {
+  constructor(private config: IApiConfig = {}) {
+    this.config.baseURL =
+      this.config.baseURL || process.env.REACT_APP_SERVER_BASEURL;
+  }
+}
+
+export { MyAPI };
