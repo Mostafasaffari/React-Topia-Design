@@ -29,6 +29,14 @@ class MyAPI {
       throw err;
     }
   }
+  public async post(url: string, data: any = {}): Promise<IResponseData> {
+    try {
+      const response = await axios.post(url, data, this.config);
+      return response.data as IResponseData;
+    } catch (err) {
+      return handleError(err);
+    }
+  }
 }
 
 export { MyAPI };
