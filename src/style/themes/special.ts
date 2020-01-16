@@ -5,7 +5,8 @@ const theme: DefaultTheme = {
   borderRadius: {
     main: "5px",
     box: "8px",
-    button: "4px"
+    button: "4px",
+    card: "8px"
   },
   sizes: {
     font: {
@@ -62,6 +63,10 @@ const theme: DefaultTheme = {
     }
   },
   colors: {
+    link: {
+      main: "#1890ff",
+      hover: "#40a9ff"
+    },
     background: {
       main: "#fafafa",
       firstGradient: "linear-gradient(to right, #fe5193, #f77062)",
@@ -69,22 +74,36 @@ const theme: DefaultTheme = {
       contentLayout: "#fefefe",
       footer: "#fefefe",
       sideBar: "#ff0000",
-      hoverLight: "rgba(255, 0, 0, 0.2)"
+      hoverLight: "rgba(255, 0, 0, 0.2)",
+      box: "#fffff"
     },
     border: {
       main: "#f77062",
-      secound: "#04f0c5"
+      secound: "#04f0c5",
+      third: "#51fff3",
+      fourth: "#00d4ff",
+      danger: "tomato",
+      card: "#e8e8e8"
     },
     font: {
       main: "#ff0000",
       secound: "#0000ff",
-      light: "#ffffff"
+      third: "#00d4ff",
+      light: "#ffffff",
+      danger: "tomato"
     },
     button: {
       gradientBackgroud:
         "linear-gradient(107.24deg, #04f0c5 0%, #00dda2 99.85%)",
-      hoverBackground: "#fefefe"
+      secoundGradientBackground:
+        "linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(81, 255, 243, 1) 0%, rgba(45, 210, 255, 1) 100%, rgba(0, 212, 255, 0.7777485994397759) 100%)",
+      hoverBackground: "#fefefe",
+      danger: "tomato"
     }
+  },
+
+  textShadow: {
+    thin: "1px 1px 5px #0a28ff87"
   }
 };
 
