@@ -5,7 +5,7 @@ import handleError from "./handleApiError";
 interface IApiConfig {
   baseURL?: string;
   headers?: {
-    "X-TOKEN"?: string | null;
+    Authorization?: string | null;
   };
 }
 
