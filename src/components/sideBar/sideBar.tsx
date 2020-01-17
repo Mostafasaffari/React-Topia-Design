@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { INavigationSidebar } from "../../interfaces/dataListInterfaces";
+import { INavigationSidebar } from "../../interfaces/INavigationSidebar";
 
 import Menu from "../ui-kit/menu";
 import Icon from "../ui-kit/icon";

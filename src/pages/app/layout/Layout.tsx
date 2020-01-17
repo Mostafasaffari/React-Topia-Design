@@ -4,7 +4,7 @@ import { RouteComponentProps } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 import { ThemeProvider, DefaultTheme } from "styled-components";
 
-import { INavigationSidebar } from "../../../interfaces/dataListInterfaces";
+import { INavigationSidebar } from "../../../interfaces/INavigationSidebar";
 
 import { AppState } from "../../../redux/store";
 import userActions from "../../../redux/user/actions";
